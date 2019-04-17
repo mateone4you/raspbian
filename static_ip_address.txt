@@ -1,0 +1,15 @@
+Настройка статического IP-адреса в Raspbian
+
+sudo nano /etc/dhcpcd.conf
+****
+nodhcp
+
+interface eth0
+static ip_address=192.168.1.250/24
+static routers=192.168.1.2
+static domain_name_servers=192.168.1.2
+
+interface wlan0
+static ip_address=192.168.1.250/24
+static routers=192.168.1.2
+static domain_name_servers=192.168.1.2
